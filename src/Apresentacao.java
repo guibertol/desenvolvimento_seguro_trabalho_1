@@ -135,6 +135,8 @@ public class Apresentacao extends javax.swing.JFrame {
             return;
         }
         
+        chamarClasseEncriptar(chave, "OI TUDO BEM");
+        
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -217,6 +219,17 @@ public class Apresentacao extends javax.swing.JFrame {
             jTextField3.setText("");
         }
 
+    }
+    
+    private void chamarClasseEncriptar(String chaveBytes, String textoCriptorafar){
+    
+        Encripta encriptador = new Encripta();
+        encriptador.setChaveencriptacao(chaveBytes);
+        encriptador.setTextopuro(textoCriptorafar);
+        encriptador.executar();
+        
+        
+        
     }
     
 }
